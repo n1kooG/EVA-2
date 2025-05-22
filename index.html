@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario de Registro</h2>
+    <form id="registroForm" novalidate>
+
+      <!-- Nombre de Usuario -->
+      <label>Nombre de Usuario:</label>
+      <input type="text" id="usuario" />
+      <span class="error" id="errorUsuario"></span>
+
+      <!-- Contraseña -->
+      <label>Contraseña:</label>
+        <div class="password-wrapper">
+            <input type="password" id="contrasena" />
+            <button type="button" onmousedown="mostrarPassword()" onmouseup="ocultarPassword()" onmouseleave="ocultarPassword()" class="ver-btn">👁️</button>
+        </div>
+        <span class="error" id="errorContrasena"></span>
+
+
+      <!-- Confirmación de contraseña -->
+        <label>Confirmar Contraseña:</label>
+            <input type="password" id="confirmarContrasena" />
+            <span class="error" id="errorConfirmar"></span>
+
+      <!-- Dirección -->
+        <label>Dirección:</label>
+            <input type="text" id="direccion" />
+            <span class="error" id="errorDireccion"></span>
+
+      <!-- Comuna -->
+        <label>Comuna:</label>
+            <select id="comuna">
+                <option value="">Seleccione una comuna</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Maipú">Maipú</option>
+                <option value="Ñuñoa">Ñuñoa</option>
+                <option value="Las Condes">Las Condes</option>
+                <option value="Providencia">Providencia</option>
+                <option value="La Florida">La Florida</option>
+                <option value="Puente Alto">Puente Alto</option>
+                <option value="Valparaíso">Valparaíso</option>
+                <option value="Concepción">Concepción</option>
+                <option value="Antofagasta">Antofagasta</option>
+                <option value="Temuco">Temuco</option>
+                <option value="Talca">Talca</option>
+                <option value="Rancagua">Rancagua</option>
+                <option value="Iquique">Iquique</option>
+                <option value="Arica">Arica</option>
+                <option value="Copiapó">Copiapó</option>
+                <option value="La Serena">La Serena</option>
+                <option value="Ovalle">Ovalle</option>
+                <option value="Curicó">Curicó</option>
+                <option value="Los Ángeles">Los Ángeles</option>
+                <option value="Punta Arenas">Punta Arenas</option>
+                <option value="Coyhaique">Coyhaique</option>
+                <option value="Puerto Montt">Puerto Montt</option>
+                <option value="Castro">Castro</option>
+                <option value="Puerto Varas">Puerto Varas</option>
+                <option value="Valdivia">Valdivia</option>
+                <option value="Osorno">Osorno</option>
+            </select>
+        <span class="error" id="errorComuna"></span>
+
+      <!-- Teléfono -->
+      <label>Teléfono:</label>
+      <input type="text" id="telefono" />
+      <span class="error" id="errorTelefono"></span>
+
+      <!-- Página Web -->
+      <label>Página Web Personal:</label>
+      <input type="text" id="paginaWeb" placeholder="Ej: https://www.miwebpersonal.cl" />
+      <span class="error" id="errorPaginaWeb"></span>
+
+      <!-- Aficiones -->
+      <label>Aficiones:</label>
+      <input type="text" id="aficionInput" />
+      <button type="button" onclick="agregarAficion()">Agregar</button>
+      <ul id="listaAficiones"></ul>
+      <span class="error" id="errorAficiones"></span>
+
+      <!-- Botón de Envío -->
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
