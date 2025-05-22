@@ -16,7 +16,6 @@ function agregarAficion() {
   }
 }
 
-
 function togglePassword() {
     const input = document.getElementById("contrasena");
     if (input.type === "password") {
@@ -102,11 +101,13 @@ document.getElementById("registroForm").addEventListener("submit", function (e) 
   }
 
   // Página web válida
-  try {
-    new URL(paginaWeb);
-  } catch {
-    document.getElementById("errorPaginaWeb").textContent = "URL inválida.";
-    valido = false;
+  if (paginaWeb !== "") {
+    try {
+      new URL(paginaWeb);
+    } catch {
+      document.getElementById("errorPaginaWeb").textContent = "URL inválida.";
+      valido = false;
+    }
   }
 
   // Aficiones: mínimo 2
